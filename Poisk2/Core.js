@@ -1,0 +1,73 @@
+.pragma library
+
+var APP_FONT = "Verdana";
+var APP_DIALOG_BUTTON_TEXT_SIZE = 14;
+var APP_DIALOG_BUTTON_RADIUS = 5;
+var APP_DIALOG_BORDER_WIDTH = 5;
+var APP_DIALOG_RADIUS = 5;
+var APP_THIN_BORDER_WIDTH = 1;
+var APP_BORDER_COLOR = "#3366cc";
+var APP_SELECTION_COLOR = "#5082e6";
+var APP_NON_SELECTION_COLOR = "#d5eaff";
+var APP_DIALOG_COLOR = "#edf6ff";
+var APP_DIALOG_HEADER_TEXT_SIZE = 16;
+var APP_DIALOG_LABELS_SIZE = 12;
+var APP_DIALOG_BIG_LABELS_SIZE = 16;
+var APP_DIALOG_LINE_EDIT_TEXT_SIZE = 19;
+var APP_ITEM_DELEGATE_MARGIN = 4;
+var APP_ITEM_DELEGATE_TEXT_SIZE = 12;
+var APP_EDIT_ICON_SIZE = 18;
+var APP_DEFAULT_ICON_SIZE = 54;
+
+var searchTab = {
+    STATE: "SEARCH",
+    SEARCH_STATE: "SEARCH",
+    RESULT_STATE: "RESULT",
+    RECORD_STATE: "RECORD"
+}
+
+var journalTab = {
+    STATE: "JOURNAL",
+    VEHICLE_STATE: "VEHICLE",
+    VIOLATION_STATE: "VIOLATION"
+}
+
+var baseTab = {
+    STATE: "BASE",
+    OPERATION_STATE: "OPERATION",
+    OTHERS_STATE: "OTHERS"
+}
+
+var settingTab = {
+    STATE: "SETTING",
+    SOUND_STATE: "SOUND",
+    RECORD_STATE: "RECORD",
+    RADAR_STATE: "RADAR"
+}
+
+var TOOL_BOX_BIG_BUTTON_HEIGHT = 130;
+var TOOL_BOX_MIDDLE_BUTTON_HEIGHT = 110;
+
+var TOOLBOX_MAP = {};
+TOOLBOX_MAP[searchTab.STATE] = {
+    buttonState: ["", searchTab.SEARCH_STATE, searchTab.RESULT_STATE, searchTab.RECORD_STATE],
+    buttonHeight: TOOL_BOX_MIDDLE_BUTTON_HEIGHT
+}
+TOOLBOX_MAP[journalTab.STATE] = {
+    buttonState: ["", journalTab.VEHICLE_STATE, journalTab.VIOLATION_STATE],
+    buttonHeight: TOOL_BOX_BIG_BUTTON_HEIGHT
+}
+TOOLBOX_MAP[baseTab.STATE] = {
+    buttonState: ["", baseTab.OPERATION_STATE, baseTab.OTHERS_STATE],
+    buttonHeight: TOOL_BOX_BIG_BUTTON_HEIGHT
+}
+TOOLBOX_MAP[settingTab.STATE] = {
+    buttonState: ["", settingTab.SOUND_STATE, settingTab.RECORD_STATE, settingTab.RADAR_STATE],
+    buttonHeight: TOOL_BOX_MIDDLE_BUTTON_HEIGHT
+}
+
+var PDF = "Pdf";
+var AVI = "Avi";
+
+var LEFT = "left";
+var RIGHT = "right";
