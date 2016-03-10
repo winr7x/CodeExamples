@@ -1,10 +1,10 @@
 #include <QtCore/QThread>
 
 #include "AbstractIpCamera.h"
-#include "Scheduler.h"
-#include "ScheduleModel.h"
 #include "CameraObject.h"
 #include "CameraWorker.h"
+#include "Scheduler.h"
+#include "ScheduleModel.h"
 
 #include "UsedCameras.h"
 
@@ -19,7 +19,6 @@ UsedCameras::UsedCameras (QObject *parent)
 
 UsedCameras::~UsedCameras()
 {
-
 }
 
 int UsedCameras::count() const
@@ -39,11 +38,7 @@ bool UsedCameras::isEmpty () const
 
 AbstractIpCamera *UsedCameras::camera (int index) const
 {
-	if (!isIndexCorrect (index)) {
-		return nullptr;
-	}
-
-	return cameras_.at (index)->camera ();
+	return isIndexCorrect (index) ? cameras_.at (index)->camera () : nullptr;
 }
 
 UsedCameras::Cameras::const_iterator UsedCameras::find (const QString &address) const
